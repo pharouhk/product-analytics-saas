@@ -1,0 +1,664 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+
+
+body {
+    width: 100%;
+    min-width: 1280px;
+    height:100vh;
+    min-height: 651px;
+    position:absolute;
+    background-color: #F2F2F2;
+  }
+  
+  .containerCustomOverview{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-rows: 50px auto auto;
+    grid-template-columns: 2fr 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 1.5rem;
+  }
+
+  .card {
+    border: none !important;
+    height: 100%;
+  }
+
+  .card-header {
+    border-bottom: none !important;
+    margin-bottom: 0px;
+  }
+  
+  .nameAndFilterRow{
+    grid-column: 1 / 4;
+  }
+
+  .emptyRow{
+    /* grid-column: 1 / -1; */
+  }
+
+  .revTrendCard{
+    /* grid-column: 1/ 3; */
+  }
+
+  .topCustCard{
+    grid-column: 2/ 4;
+    max-height: 350px;
+  }
+
+  .FilterRow {
+    display: flex;
+    width: 50%;
+    column-gap: 2rem;
+    font-size: 14px;
+  }
+
+  .optionsClass {
+    width: 40%;
+    height: 100%;
+    border: none;
+    margin-left: 5%;
+  }
+
+  .cardPieContent{
+    display: flex;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    /* column-gap: 0.2rem; */
+  }
+
+  .lastRefreshed{
+    color: #A6A6A6;
+    font-size: 13px;
+  }
+
+  /* .cardAreaContent{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  } */
+
+  .prefixRowData {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    font-size: 13px;
+  }
+
+  .eachRowFlex{
+    display: none;
+  }
+
+  .eachRowFlex.active{
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    column-gap: 0.5rem;
+  }
+
+  .eachBottomRowFlex{
+    display: flex;
+    column-gap: 1.0rem;
+    color: #7F7F7F;
+  }
+
+  .prefixLeftCol{
+    /* width: 10%;
+    margin-top: 2%; */
+    text-align: center;
+    color: white;
+  }
+
+  .prefixRightCol{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* .headerRow{
+    display: flex;
+    justify-content: space-between;
+  } */
+
+  .activeTabs{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5%;
+    font-size: 13px;
+    color: #7F7F7F;
+    margin-top: 2%;
+  }
+
+  .activeTab{
+    text-decoration: underline;
+    color: #7F7F7F;
+  }
+
+  .inactiveTab{
+    text-decoration: none;
+    color: #7F7F7F;
+  }
+
+  .dot {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 12px;
+  }
+
+  .dotLoader {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+  }
+
+  .prefixRowData {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    font-size: 13px;
+  }
+
+  .textDisplay{
+    width: 20%;
+  }
+
+  /* .skeletonFlex{
+    flex: 1 1 0%;
+  } */
+
+  #dot-used{
+    background-color: #00B050;
+  }
+
+  #dot-unused{
+    background-color: #DE0005;
+  }
+
+  #revTextColor{
+    color: #7030A0;
+    font-weight: bold;
+  }
+
+  #valTextColor{
+    color: #00B4B0;
+    font-weight: bold;
+  }
+
+  #boldHeader{
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  #leftPieContent{
+    width: 50%;
+    margin-top: 15%;
+  }
+
+  #rightPieContent{
+    width: 50%;
+  }
+
+  #nav-bg-color{
+    background-color: white;
+  }
+  #positionNameAndFilters{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-top: 1%;
+  }
+
+  #PageName {
+    width: 20%;
+    margin-left: 0.5rem;
+  }
+  
+  #active-nav {
+    background-color: #D1D5DB;
+    color: #7F7F7F;
+  }
+  
+  #inactive-nav {
+    color: #7F7F7F;
+  }
+
+  #revperUser{
+    color: #7030A0;
+    font-weight: bold;
+    margin-top: 0%;
+  }  
+  
+  #Loader-spinner {
+    margin-top: 5rem;
+    width: 6rem; 
+    height: 6rem;
+    }
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------*/
+/* Transaction Analytics Custom CSS */
+.containerCustomTransaction{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-rows: 50px 230px 270px;
+    grid-template-columns: 2.0fr 2.0fr;
+    column-gap: 2rem;
+    row-gap: 1.0rem;
+  }
+
+  .errorPage{
+    grid-column: 1/ -1;
+    grid-row: 1/ -1;
+  }
+
+  .errorDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #374151;
+  }
+
+  .errorLabel{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+  }
+
+  .errorMsg{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+  }
+
+  .userInstruction{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #1D4ED8;
+  }
+
+.tabCards{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.volval-nav-tabs{
+    height: 2.5rem;
+    display: flex;
+    column-gap: 0.2rem;
+    text-align: center;
+}
+
+.volval-tab-contents{
+    height: 100%;
+}
+
+.nav-activeTab{
+    width: 15%;
+    background-color: white;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    line-height: 2.5rem;
+}
+
+.nav-inactiveTab{
+    width: 15%;
+    text-decoration: none;
+    line-height: 40px;
+}
+
+.card.inactive {
+    display: none;
+}
+
+.card.active {
+    border: none !important;
+    border-radius: 0 0 0.375rem 0.375rem;
+    height: 100%;
+}
+
+.cardBarTrends{
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.fspTable{
+    grid-column: 1/ 3;
+}
+
+.fspDropDown{
+    width: 30%;
+}
+
+.prefixDropDown{
+    width: 18%;
+}
+
+.dateRangeField{
+    display: flex;
+    width: 20%;
+    column-gap: 0.2rem;
+}
+
+/* .startDate{
+    width: 50%;
+} */
+
+/* .endDate{
+    width: 50%;
+} */
+
+.dateLabel{
+    margin-top: 0.2rem;
+}
+
+/* overwriting the date input class*/
+.react-datepicker__view-calendar-icon input{
+    padding: 2px 2px 2px 25px;
+    width: 100%;
+}
+
+.card-body.customized {
+    display: flex;
+    column-gap: 3rem;
+}
+
+.optionsPeriodClass {
+width: 40%;
+margin-left: 5%;
+color: #7F7F7F;
+font-size: 12.5px;
+}
+
+.optionsTableClass {
+    margin-left: 5%;
+    color: #7F7F7F;
+    font-size: 14px;
+}
+
+.tableData{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 80%;
+    border:1px solid #D1D5DB;
+    margin-left: 0.5rem;
+    overflow-y: scroll;
+}
+
+.rateLabel{
+    font-size: 10.5px;
+    /* color: #767171; */
+}
+.eachDataRow{
+    margin-left: 1rem;
+    border-bottom: 1px solid #D1D5DB;
+}
+.eachTopRow{
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 0px;
+    color: #3A424C;
+}
+
+.topRowLoader{
+    margin-bottom: 0px;
+    width: 25%;
+}
+
+.eachBottomRow{
+    display: flex;
+    column-gap: 2rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin-bottom: 0.1rem;
+    text-align: center;
+}
+
+.textBold{
+    font-weight: bold;
+}
+.textandBgRev{
+    color: #7030A0;
+    background-color: #D2C1F1;
+    border-radius: 0.5rem;
+    flex-basis: 10rem;
+}
+
+.textandBgCnt{
+    color: white;
+    background-color: #7DD1BF;
+    border-radius: 0.5rem;
+    flex-basis: 7rem;
+}
+
+.textandBgVal{
+    color: white;
+    background-color: #4AABC6;
+    border-radius: 0.5rem;
+    flex-basis: 10rem;
+}
+
+.textAndBgLoader {
+    border-radius: 0.5rem;
+    flex-basis: 7rem;
+}
+
+.textPend{
+    color: #BF9000;
+    font-weight: bold;
+
+}
+
+.textFail{
+    color: #C55A11;
+    font-weight: bold;
+
+}
+
+.exportButtonDiv{
+    display: flex;
+    width: 95%;
+    height: 20%;
+    border:1px solid #D1D5DB;
+    margin-left: 0.5rem;
+    margin-right: auto;
+    justify-content: flex-end;
+    /* align-self: flex-end; */
+}
+
+#exportButton{
+    margin-top: 0.3%;
+    height: 35px;
+    margin-right: 2%;
+}
+
+.cardAggNum{
+    width: 25%;
+}
+
+.cardTxnRate{
+    width: 25%;
+    text-align: center;
+}
+
+.FilterRowTxns {
+    display: flex;
+    width: 50%;
+    column-gap: 1rem;
+    font-size: 14px;
+}
+
+.fspTableContents{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.tableHeaderRow{
+    display: flex;
+    align-self: flex-end;
+    width: 16%;/*formerly 30% with show as span*/
+    height: 30px;
+    margin-top: 0.6%;
+}
+
+
+#freqSpan{
+    width: 30%;
+    color: #7F7F7F;
+    font-size: 12.5px;
+}
+
+#sortBy{
+    width: 100%; /*formerly 40% with show as span*/
+    font-size: 14px;
+}
+
+#showAs{
+    width: 50%;
+    font-size: 14px;
+}
+
+/*--------------------------------------------Login Screen CSS ---------------------------------------*/
+.loginPageContainer{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #F3F4F6;
+}
+
+.logoImgDiv{
+    max-width: 24rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logoImg{
+    width:auto;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loginCard{
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 25%;
+}
+
+.welcomeText{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #A6A6A6;
+}
+
+.emailFieldDiv{
+    margin-bottom: 1rem;
+}
+
+.labelFieldText{
+    display: block;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.inputBox{
+    /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
+    border-radius: 0.375rem;
+    width: 100%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-width: 0.02px;
+    
+    border-color: rgb(209, 213, 219, 0.3); 
+    
+}
+
+.inputBox:focus{
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    --ring-color: #6366F1;
+    border-color: #6366F1;
+}
+
+.passwordFieldDiv{
+    margin-bottom: 1rem;
+}
+
+.loginButton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border-width: 1px;
+    border-color: transparent;
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    color:#ffffff;
+    background-color: #4F46E5;
+
+    
+}
+
+.loginButton:hover{    
+    background-color: #4338CA;
+}
+
+.loginButton:focus{    
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    --ring-offset-width: 2px;
+    box-shadow: 0 0 0 var(--ring-offset-width) var(--ring-offset-color), var(--ring-shadow);
+    --ring-color: #6366F1;
+}
+
+}
